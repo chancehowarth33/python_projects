@@ -1,0 +1,41 @@
+<html>   
+  <head>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      function subscribe() {
+        var email = prompt("What is your email?", "????");
+
+        $.post({
+          type: "POST",
+          url: "email",
+          data: email,
+          contentType: "application/text; charset=utf-8",
+          dataType: "json"
+        }).done(function(data) {
+          alert(data);
+        }).fail(function(data) {
+          alert("POST failed");
+        });
+      }
+    </script>
+  </head>
+  <body>
+
+    <h1>Welcome!</h1>
+
+    <p>Enjoy the data.</p>
+
+    <p>See the data in a table format <a href="browse.html">here</a>.</p>
+    <p>See the data in a JSON format <a href="browse.json">here</a>.</p>
+    <p>See the visitors <a href="visitors.json">here</a>.</p>
+    <p>Donate <a href="donate.html">here</a>.</p>
+
+    <button onclick="subscribe()">Subscribe</button>
+
+    <!-- SVG images from the Flask app -->
+    <h2>Dashboard</h2>
+    <img src="histogram.svg"><br><br>
+    <img src="histogram.svg?bins=50"><br><br>
+    <img src="line.svg"><br><br>
+  </body>
+</html>
