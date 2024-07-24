@@ -1,0 +1,3 @@
+# Movies Website
+
+This Flask web application serves as an interactive platform for data visualization and user engagement. It presents data from a CSV file of the top 1000 movies ranked my IMDb in both HTML and JSON formats, offering users the ability to browse through this data via specific web endpoints. Additionally, the website features dynamic elements like a changing donation button and an email subscription service, enhancing user interaction. The application also generates and serves graphical representations of the data in SVG format, such as histograms and line charts, providing insightful visualizations of the underlying IMDb dataset.
